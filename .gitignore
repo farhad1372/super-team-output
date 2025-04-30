@@ -11,6 +11,7 @@ yarn.lock
 .env.production
 
 dist/
+api/
 *.tsbuildinfo
 
 .puppeteer_cache/

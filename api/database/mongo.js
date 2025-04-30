@@ -2,14 +2,15 @@
 import dotenv from 'dotenv';
 dotenv.config();
 const MONGO_URL = "mongodb+srv://farhad:<KTRjOcoilyWv5cyh>@superteam.ueat2qt.mongodb.net";
+// const MONGO_URL = "mongodb://localhost:27017/superteam";
 export const mongoConnection = function (mongoose) {
     async function connectToMongo() {
         try {
             await mongoose.connect(MONGO_URL, {
-                auth: {
-                    username: "farhad",
-                    password: "KTRjOcoilyWv5cyh"
-                }
+            // auth: {
+            //     username: "farhad",
+            //     password: "KTRjOcoilyWv5cyh"
+            // }
             });
         }
         catch (e) {

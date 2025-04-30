@@ -4,11 +4,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "",
-    "start": "node api/index.js",
-    "dev": "set NODE_ENV=development && tsc-watch --onSuccess \"npm run start\"",
+    "build": "npm run clean && tsc",
+    "start": "tsc-alias &&  node api/index.js",
+    "dev": "npm run clean && set NODE_ENV=development && tsc-watch --onSuccess \"npm run start\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": ""
+    "clean": "rimraf ./api"
   },
   "keywords": [],
   "author": "",
